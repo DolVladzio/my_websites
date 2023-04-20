@@ -1,0 +1,22 @@
+.footer {
+	color: #E5E5E5;
+	font-size: 14px;
+	background: #343A40;
+	padding: 31px 0;
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__copy {
+		font-weight: 700;
+		line-height: 128.571429%; /* 18px/14 */
+	}
+
+	&__up {
+		font-weight: 400;
+		line-height: 128.571429%; /* 18px/14 */;
+	}
+}
