@@ -1,0 +1,39 @@
+.featuring {
+	padding: 100px 0;
+
+	&__block {
+
+		&:not(:last-child) {
+			margin: 0 0 75px 0;
+		}
+	}
+
+	&__body {
+		display: grid;
+		align-items: center;
+		grid-template-columns: repeat(4, auto);
+		justify-content: space-between;
+		column-gap: 100px;
+		row-gap: 80px;
+	}
+
+	&__item {
+
+		& img {
+			max-width: 100%;
+		}
+		& img:hover {
+			transition: all 0.5s ease;
+			transform: scale(1.05);
+		}
+	}
+
+	@media (max-width: 650px) {
+		&__body {
+			grid-template-columns: repeat(2, auto);
+			justify-content: center;
+			column-gap: 50px;
+			row-gap: 60px;
+		}
+	}
+}
