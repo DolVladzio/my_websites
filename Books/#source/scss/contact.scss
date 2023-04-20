@@ -1,0 +1,130 @@
+.contact {
+	padding: 120px 0;
+
+	&__block {
+		padding: 100px 150px;
+		background: #FFCA42;
+		box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.18);
+		border-radius: 5px;
+	}
+
+	&__content {
+		&:not(:last-child) {
+			margin: 0 0 40px 0;
+		}
+	}
+
+	&__title {
+		text-align: center;
+		position: relative;
+		padding: 0 0 23px 0;
+		&::after {
+			content: '';
+			position: absolute;
+			background: #1B3764;
+			width: 50px;
+			height: 3px;
+			bottom: 0;
+			left: 48%;
+		}
+		&:not(:last-child) {
+			margin: 0 0 50px 0;
+		}
+	}
+
+	&__text {
+		font-family: 'Inter';
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 155.555556%; /* 28px/18 */
+		text-align: center;
+		color: #1B3764;
+		&:not(:last-child) {
+			margin: 0 0 25px 0;
+		}
+	}
+}
+.form {
+	display: flex;
+	align-items: center;
+
+	&__input {
+		padding: 26px 39px;
+		display: block;
+		border: 1px solid #DCE1E9;
+		background: #fff;
+		margin: 0 16px 0 0;
+		flex: 1 1 70%;
+		transition: all 0.5s ease;
+		&::placeholder {
+			font-family: 'Inter';
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 172.222222%; /* 31px/18 */
+			letter-spacing: 0.18px;	
+			color: #B4C7E7;
+		}
+		&:focus,
+		&:hover {
+			box-shadow: 0px 0px 1px 1px #1B3764;
+		}
+	}
+
+	&__btn {
+		background: #1B3764;
+		border: 2px solid #1B3764;
+		font-family: 'Inter';
+		padding: 17px 120px;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 172.222222%; /* 31px/18 */
+		letter-spacing: 0.18px;
+		color: #FFFFFF;
+		flex: 0 1 30%;
+		transition: all 0.3s ease;
+		&:focus,
+		&:hover {
+			background: #FFCA42;
+			color: #1B3764;
+		}
+	}
+}
+/*--------------------------------*/
+@media (max-width: 1200px) {
+	.contact {
+
+		&__block {
+			padding: 100px 75px;
+		}
+	}
+}
+/*--------------------------------*/
+@media (max-width: 1000px) {
+	.form {
+		flex-direction: column;
+
+		&__input,
+		&__btn {
+			margin: 0;
+			width: 100%;
+			&:not(:last-child) {
+				margin: 0 0 25px 0;
+			}
+		}
+		&__input {
+			padding: 20px 15px;
+		}
+		&__btn {
+			padding: 17px 25px;
+		}
+	}	
+}
+/*--------------------------------*/
+@media (max-width: 600px) {
+	.contact {
+
+		&__block {
+			padding: 75px 25px;
+		}
+	}
+}

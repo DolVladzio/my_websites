@@ -1,0 +1,151 @@
+.articles {
+	padding: 120px 0;
+	background: #F4F8FF;
+
+	&__title {
+		text-align: center;
+		position: relative;
+		padding: 0 0 20px 0;
+		&::after {
+			content: '';
+			position: absolute;
+			width: 50px;
+			background: #FFCA42;
+			height: 3px;
+			bottom: 0;
+			left: 48%;
+		}
+		&:not(:last-child) {
+			margin: 0 0 90px 0;
+		}
+	}
+
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+		margin: 0 -10px;
+		row-gap: 25px;
+	}
+
+	&__column {
+		padding: 0 10px;
+	}
+}
+.item-articles {
+
+	&__image {
+		display: block;
+		position: relative;
+		padding: 0 0 83.5% 0;
+
+		& img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+			transition: all 0.3s ease;
+			&:hover {
+				transform: scale(1.02);
+			}
+		}
+	}
+
+	&__content {
+		padding: 25px 30px;
+		background: #fff;
+		color: #1B3764;
+		& > *:not(:last-child) {
+			margin: 0 0 15px 0;
+		}
+	}
+
+	&__title {
+		display: block;
+		font-family: 'Cardo';
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 141.666667%; /* 34px/24 */
+		letter-spacing: 0.24px;
+		color: #1B3764;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__text {
+		flex: 1 1 auto;
+		font-family: 'Inter';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 19px;
+		line-height: 157.894737%; /* 30px/19 */
+		color: #969AA0;
+	}
+
+	&__info {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		& > *:not(:last-child) {
+			margin: 0 10px 0 0;
+		}
+	}
+
+	&__link {
+		display: block;
+		font-family: 'Cardo';
+		font-weight: 400;
+		font-size: 19px;
+		line-height: 121.052632%; /* 23px/19 */
+		letter-spacing: 0.38px;
+		text-transform: capitalize;
+		color: #1B3764;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__date {
+		font-family: 'Inter';
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 162.5%; /* 26px/16 */
+		color: #1B3764;
+	}
+}
+/*--------------------------------*/
+@media (max-width: 900px) {
+	.articles {
+
+		&__body {
+			grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+		}
+	}
+}
+/*--------------------------------*/
+@media (max-width: 600px) {
+	.articles {
+		padding: 50px 0;
+	}
+
+	.item-articles {
+		&__content {
+			padding: 20px;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

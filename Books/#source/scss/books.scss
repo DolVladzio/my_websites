@@ -1,0 +1,228 @@
+.books {
+	padding: 200px 0 50px 0;
+	background: #1B3764;
+
+	&__flex {
+		padding: 0 20px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__content {
+		max-width: 600px;
+		padding: 0 75px 0 0;
+	}
+
+	&__sub-title {
+		display: inline-block;
+		font-family: 'Cardo';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 21px;
+		line-height: 171.428571%; /* 36px/21 */
+		letter-spacing: 1.2px;
+		text-transform: capitalize;
+		color: #FFFFFF;
+		padding: 0 0 0 50px;
+		position: relative;
+		&:not(:last-child) {
+			margin: 0 0 15px 0;
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			width: 35px;
+			height: 2px;
+			top: 15px;
+			left: 0;
+			background: #FFCA42;
+		}
+	}
+
+	&__title {
+		font-family: 'Cardo';
+		font-weight: 400;
+		font-size: 64px;
+		line-height: 121.875%; /* 78px/64 */
+		letter-spacing: 1.3px;
+		color: #FFFFFF;
+		&:not(:last-child) {
+			margin: 0 0 25px 0;
+		}
+	}
+
+	&__text {
+		font-family: 'Inter';
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 155.555556%; /* 28px/18 */
+		color: #B4C7E7;
+		&:not(:last-child) {
+			margin: 0 0 25px 0;
+		}
+	}
+
+	&__links {
+		display: flex;
+		align-items: center;
+		column-gap: 50px;
+		&:not(:last-child) {
+			margin: 0 0 40px 0;
+		}
+	}
+
+	&__link {
+		&:not(:last-child) {
+			margin: 0 0 10px 0;
+		}
+	}
+
+	&__read {
+		font-family: 'Cardo';
+		font-weight: 400;
+		font-size: 19px;
+		line-height: 157.894737%; /* 30px/19 */
+		letter-spacing: 0.38px;
+		text-transform: capitalize;
+		color: #FFFFFF;
+		position: relative;
+		&::after {
+			content: '';
+			position: absolute;
+			width: 0;
+			height: 2px;
+			bottom: 0;
+			left: 50%;
+			background: #fff;
+			transition: all 0.3s ease;
+		}
+		&:hover::after {
+			width: 100%;
+			left: 0;
+		}
+	}
+
+	&__image {
+		flex: 0 1 50%;
+		text-align: right;
+
+		& img {
+			max-width: 100%;
+		}
+	}
+}
+.info-books {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	row-gap: 25px;
+
+	&__item {
+		position: relative;
+		padding: 0 0 0 26px;
+		&::before {
+			content: '';
+			position: absolute;
+			width: 16px;
+			height: 16px;
+			top: 5px;
+			left: 0;
+			background: #FFCA42;
+			border-radius: 50%;
+		}
+		&:not(:last-child) {
+			margin: 0 50px 0 0;
+		}
+	}
+
+	&__title {
+		font-family: 'Cardo';
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 120.833333%; /* 29px/24 */
+		letter-spacing: 0.48px;
+		color: #FFFFFF;
+		& span {
+			display: block;
+			font-family: 'Inter';
+			font-weight: 400;
+			font-size: 17px;
+			line-height: 158.823529%; /* 27px/17 */
+			color: #B4C7E7;
+			margin: 10px 0 0 0;
+		}
+	}
+}
+/*--------------------------------*/
+@media (max-width: 1100px) {
+	.books {
+		padding: 100px 0 75px 0;
+		
+		&__flex {
+			padding: 0;
+		}
+		&__title {
+			font-size: 45px;
+		}
+	}
+}
+/*--------------------------------*/
+@media (max-width: 1000px) {
+	.books {
+		&__flex {
+			align-items: start;
+		}
+
+		&__content {
+			max-width: 500px;
+		}
+		&__links {
+			row-gap: 15px;
+		}
+	}
+}
+/*--------------------------------*/
+@media (max-width: 900px) {
+	.books {
+		&__content {
+			padding: 0 40px 0 0;
+		}
+		&__title {
+			font-size: 30px;
+		}
+	}
+}
+/*--------------------------------*/
+@media (max-width: 800px) {
+	.books {
+		&__flex {
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+		&__content {
+			padding: 0;
+			&:not(:last-child) {
+				margin: 0 0 50px 0;
+			}
+		}
+	}
+}
+/*--------------------------------*/
+@media (max-width: 600px) {
+	.books {
+		&__links {
+			flex-direction: column;
+		}
+		&__links {
+			text-align: center;
+		}
+		&__link {
+			width: 100%;
+		}
+	}
+}
+/*--------------------------------*/
+
+
