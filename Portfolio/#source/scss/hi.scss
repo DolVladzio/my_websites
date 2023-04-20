@@ -1,0 +1,88 @@
+.hi {
+	padding: 100px 0;
+
+	&__flex {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__body {
+		padding: 0 60px 0 0;
+		max-width: 550px;
+	}
+	&__body > *:not(:last-child) {
+		margin: 0 0 20px 0;
+	}
+
+	&__title {
+		font-family: 'Source Serif Pro';
+		font-weight: 400;
+		font-size: 48px;
+		line-height: 120.833333%; /* 58px/48 */
+		color: #3A5F56;
+	}
+
+	&__text {
+		font-family: 'Roboto';
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 137.5%; /* 22px/16 */
+		color: #292C32;
+	}
+
+	&__link {
+		display: inline-block;
+		font-family: 'Roboto';
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 137.5%; /* 22px/16 */
+		color: #FFFFFF;
+		padding: 10px 18px;
+		background: #3A5F56;
+		border-radius: 6px;
+	}
+
+	&__image {
+		align-self: flex-start;
+	}
+	&__image img {
+		max-width: 100%;
+		box-shadow: (0px 3px 15px rgba(0, 0, 0, 0.1));
+		border-radius: 25px;
+	}
+
+	@media (max-width: 900px) {
+		&__flex {
+			flex-direction: column;
+		}
+		&__flex > * {
+			margin: 0 0 30px 0;
+		}
+		&__image {
+			order: 1;
+		}
+		&__body {
+			order: 2;
+			padding: 0;
+			text-align: center;
+		}
+		&__image {
+			align-self: center;
+		}
+	}
+
+	@media (max-width: 700px) {
+		&__title {
+			font-size: 25px;
+		}
+		&__text {
+			font-size: 14px;
+		}
+	}
+}
+@media (max-width: 750px) {
+	.hi {
+		padding: 100px 0 50px 0;
+	}
+}

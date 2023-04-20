@@ -1,0 +1,52 @@
+.example {
+	padding: 100px 0;
+
+	&__block:not(:last-child) {
+		margin: 0 0 30px 0;
+	}
+
+	&__title {
+		padding: 0 0 0 35px;
+		margin: 0 0 15px 0;
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 120%;
+		position: relative;
+	}
+	&__title::after,
+	&__title::before {
+		content: '';
+		position: absolute;
+		width: 15px;
+		height: 1px;
+		top: 12px;
+		background: #000;
+		transition: all 0.3s ease;
+	}
+	&__title::after {
+		left: 0;
+		transform: rotate(-40deg);
+	}
+	&__title::before {
+		left: 10px;
+		transform: rotate(40deg);
+	}
+
+	&__title.down::after,
+	&__title.down::before {
+		background: #ff0000;
+	}
+	&__title.down::after {
+		transform: rotate(40deg);
+	}
+	&__title.down::before {
+		transform: rotate(-40deg);
+	}
+
+	&__text {
+		display: none;
+		font-size: 18px;
+		line-height: 120%;
+	}
+}
+
