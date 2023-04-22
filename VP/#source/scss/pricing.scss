@@ -1,0 +1,268 @@
+.pricing {
+	border-top: 2px solid #fff;
+	padding: 100px 0;
+	position: relative;
+
+	&__things {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin: -135px 0 0 0;
+	}
+	&__thing {
+		display: inline-block;
+		font-family: 'Roboto';
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 83.333333%; /* 20px/24 */
+		color: #FFFFFF;
+		padding: 18px 34px;
+		background: #A66DFF;
+		border: 2px solid #FFFFFF;
+		border-radius: 28px;
+		margin: 0 0 80px 0;
+	}
+
+	&__block {
+		border: 3px solid #FFFFFF;
+		border-radius: 32px;
+		padding: 50px 40px;
+	}
+
+	&__top {
+		padding: 50px 40px 0 40px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		& > *:not(:last-child) {
+			margin: 0 0 37px 0;
+		}
+		&:not(:last-child) {
+			margin: 0 0 50px 0;
+		}
+	}
+
+	&__title {
+		font-family: 'Roboto';
+		font-weight: 600;
+		font-size: 64px;
+		line-height: 93.75%; /* 60px/64 */
+		text-align: center;
+		letter-spacing: 0.02em;
+		color: #FFFFFF;
+	}
+
+	&__text {
+		font-family: 'Roboto';
+		font-weight: 400;
+		font-size: 24px;
+		color: #fff;
+		line-height: 125%; /* 30px/24 */
+		text-align: center;
+	}
+
+	&__checkbox {
+		font-family: 'Inter';
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 120%; /* 24px/20 */
+		color: #616161;
+		& p {
+			position: relative;
+			top: 7px;
+		}
+	}
+
+	&__body {
+		row-gap: 50px;
+		margin: 0 -12px;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+	}
+
+	&__column {
+		padding: 0 12px;
+	}
+
+	&__item {
+		padding: 32px 32px 40px 32px;
+		border-radius: 16px;
+		border: 2px solid #fff;
+	}
+
+	@media (max-width: 600px) {
+		&__block {
+			padding: 10px;
+		}
+		&__body {
+			grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+		}
+		&__item {
+			padding: 10px 10px 20px 10px;
+		}
+		&__title {
+			font-size: 40px;
+		}
+		&__top {
+			padding: 50px 20px 0 20px;
+		}
+	}
+}
+/*--------------------------------*/
+.checkbox {
+	transition: all 0.5s ease;
+	position: relative;
+	padding: 0 0 0 80px;
+	cursor: pointer;
+
+	&.active {
+		color: #fff;
+	}
+
+	&::before {
+		transition: all 0.5s ease;
+		content: '';
+		position: absolute;
+		width: 70px;
+		height: 40px;
+		top: 0;
+		left: 0;
+		background: #bfc0c4;
+		border-radius: 37px;
+	}
+
+	&::after {
+		transition: all 0.5s ease;
+		content: '';
+		position: absolute;
+		width: 32px;
+		height: 32px;
+		border-radius: 50%;
+		background: #fff;
+		top: 4px;
+		left: 7px;
+	}
+
+	&.active::before {
+		background: #A66DFF;
+	}
+	&.active::after {
+		left: 32px;
+	}
+
+	& input {
+		display: none;
+	}
+}
+/*--------------------------------*/
+.item-pricing {
+	&__icon {
+
+		&:not(:last-child) {
+			margin: 0 0 20px 0;
+		}
+	}
+
+	&__sub-title {
+		font-family: 'Roboto';
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 150%; /* 30px/20 */
+		color: #D0F500;
+		&:not(:last-child) {
+			margin: 0 0 10px 0;
+		}
+	}
+
+	&__price {
+		font-family: 'Roboto';
+		font-weight: 700;
+		font-size: 48px;
+		line-height: 125%; /* 60px/48 */
+		color: #FFFFFF;
+		&:not(:last-child) {
+			margin: 0 0 10px 0;
+		}
+	}
+
+	&__label {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 150%; /* 24px/16 */
+		color: #D0F500;
+		&:not(:last-child) {
+			margin: 0 0 30px 0;
+		}
+	}
+
+	&__list {
+		text-align: left;
+		&:not(:last-child) {
+			margin: 0 0 50px 0;
+		}
+	}
+
+	&__item {
+		font-family: 'Roboto';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 150%; /* 24px/16 */
+		color: #FFFFFF;
+		padding: 0 0 0 30px;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			top: 0;
+			left: 0;
+			background: url('../img/pricing/mark.svg') 0 0 / 100% no-repeat;
+		}
+
+		&:not(:last-child) {
+			margin: 0 0 15px 0;
+		}
+	}
+
+	&__item-purple {
+		&:before {
+			content: '';
+			background: url('../img/pricing/mark-purple.svg') 0 0 / 100% no-repeat;
+		}
+	}
+
+	&__link {
+		text-align: center;
+		width: 100%;
+		display: inline-block;
+		font-family: 'Roboto';
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 150%; /* 24px/16 */
+		color: #000000;
+		background: #D0F500;
+		border: 2px solid #000000;
+		padding: 12px;
+		border-radius: 35px;
+		box-shadow: 5px 5px 1px 1px #A66DFF;
+		transition: all 0.3s ease;
+		&:active {
+			box-shadow: none;
+			transform: translate(3px, 3px);
+		}
+		&:hover {
+			transform: scale(1.1) rotate(10deg);
+		}
+	}
+
+	&__link-purple {
+		background: #A66DFF;
+		box-shadow: 5px 5px 1px 1px #D0F500;
+		color: #fff;
+	}
+}

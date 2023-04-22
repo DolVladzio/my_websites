@@ -1,0 +1,78 @@
+html,
+body {
+	height: 100%;
+	background: #000;
+}
+body.lock {
+	overflow: hidden;
+}
+/*--------------------------------*/
+.wrapper {
+	font-family: 'Inter', sans-serif;
+	min-height: 100vh;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+/*--------------------------------*/
+.page {
+	flex: 1 1 auto;
+}
+/*--------------------------------*/
+[class*=__container] {
+	max-width: 1300px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+/*--------------------------------*/
+.ibg {
+	position: relative;
+}
+.ibg img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+}
+/*--------------------------------*/
+.link {
+	display: inline-block;
+	background: #D0F600;
+	border: 3px solid #000000;
+	border-radius: 44px;
+	padding: 19px 85px 19px 30px;
+	font-family: 'Roboto';
+	font-weight: 800;
+	font-size: 20px;
+	line-height: 115%; /* 23px/20 */
+	color: #000000;
+	box-shadow: 8px 5px 1px 1px #A66DFF;
+	position: relative;
+	transition: all 0.3s ease;
+	&:after {
+		content: '';
+		position: absolute;
+		width: 50px;
+		height: 25px;
+		right: 20px;
+		background: url('../img/icon/decor.svg') 0 0 / 100% no-repeat;
+	}
+	&:active {
+		box-shadow: none;
+		transform: translate(3px, 3px);
+	}
+	&:hover {
+		transform: scale(1.1) rotate(-10deg);
+	}
+}
+/*--------------------------------*/
+.green {
+	color: #D0F600;
+}
+.purple {
+	color: #A66DFF;
+}
+/*--------------------------------*/
